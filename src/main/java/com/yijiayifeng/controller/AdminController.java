@@ -16,7 +16,7 @@ public class AdminController {
     @Autowired
     AdminService adminService;
 
-
+    //我爱你曹德祥
     //登录
     @RequestMapping("/selectByPwd")
     public String selectByPwd1(Admin admin, HttpSession session) {
