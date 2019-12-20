@@ -16,7 +16,7 @@ public class AdminController {
     @Autowired
     AdminService adminService;
 
-    //傻逼张大豆
+    
     //登录
     @RequestMapping("/selectByPwd")
     public String selectByPwd1(Admin admin, HttpSession session) {
