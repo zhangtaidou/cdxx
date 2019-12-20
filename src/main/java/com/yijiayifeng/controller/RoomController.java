@@ -4,20 +4,15 @@ import com.yijiayifeng.entity.Admin;
 import com.yijiayifeng.entity.Room;
 import com.yijiayifeng.service.RoomService;
 import org.springframework.beans.factory.annotation.Autowired;
-
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 
-
-
 import javax.servlet.http.HttpSession;
-
 import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -58,7 +53,7 @@ public class RoomController {
         String path ="D:/Imp";
         //首先存传过来的文件，存到本地，然后提取存储路径放在FindData实体类中,这一步完成了再往下执行
   // room.setImg(path);
-        //在把room对象传到service的add方法
+        //        //在把room对象传到service的add方法
         roomService.addRoom(path,files,room);
         return "ShangP";
     }

@@ -16,15 +16,34 @@ public class AdminController {
     @Autowired
     AdminService adminService;
 
+
     //登录
     @RequestMapping("/selectByPwd")
-    public String selectByPwd(Admin admin, HttpSession session){
+    public String selectByPwd1(Admin admin, HttpSession session) {
         Admin admin1 = adminService.selectByPwd(admin);
+        if (admin1 == null) {
+            return "login.jsp";
+        } else {
+            session.setAttribute("admin", admin1);
+            return "Index.jsp";
+        }
+    }
+
+    //登录
+    @RequestMapping("/selectByPwd1")
+    public String selectByPwd(String account, String password, HttpSession session) {
+        Admin admin = new Admin();
+        admin.setAccount(account);
+        admin.setPassword(password);
+        Admin admin1 = adminService.selectByPwd(admin);
+        System.out.println(admin1);
         if(admin1==null){
-            return "login";
+            System.out.println("1");
+            return "redirect:/login.jsp";
         }else {
+            System.out.println("11");
             session.setAttribute("admin",admin1);
-            return "Index";
+            return "redirect:/Index.jsp";
         }
     }
 

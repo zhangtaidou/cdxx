@@ -1,4 +1,4 @@
-<%@ page language="java" import="java.util.*" pageEncoding="UTF-8" isELIgnored="false"%>
+<%@ page language="java" pageEncoding="UTF-8" isELIgnored="false" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <c:set var="app" value="${pageContext.request.contextPath}"></c:set>
 <!DOCTYPE html>
@@ -11,15 +11,15 @@
 <body>
 
 <nav class="navbar navbar-default" role="navigation">
-	<div class="container-fluid">
-	<div class="navbar-header">
-		<a class="navbar-brand" href="#">超级管理员后台</a>
+	<div class="container-fluid" style="background-color: #3e495f">
+		<div class="navbar-header">
+			<a class="navbar-brand" href="${app}/New/BotDaoHangTiao.jsp"><font color="white">超级管理员后台</font></a>
 	</div>
 	<div>
 		<ul class="nav navbar-nav">
-			<li><a href="#" onclick="G1()">酒店结算</a></li> 
-			<li><a href="#" onclick="G2()">酒店管理员插入订单操作</a></li>
-			<li><a href="#" onclick="G3()">酒店操作</a></li>
+			<li><a href="#" onclick="G1()"><font color="white">酒店结算</font> </a></li>
+			<li><a href="#" onclick="G2()"><font color="white">酒店管理员插入订单操作</font></a></li>
+			<li><a href="#" onclick="G3()"><font color="white">酒店操作</font></a></li>
 			<li><a href="#"></a></li>
 		</ul>
 	</div>
@@ -29,24 +29,32 @@
 	</div>
 	
 	<div>
-		 <iframe align="center" id="J_iframe1" width="100%" height="500" src="${app}/adminprice.jsp"  frameborder="no" border="0" marginwidth="0" marginheight="0" scrolling="no"  hidden="hide"></iframe>
+		<iframe align="center" id="J_iframe1" width="100%" height="1000" src="${app}/adminprice.jsp" frameborder="no"
+				border="0" marginwidth="0" marginheight="0" scrolling="no" hidden="hide"></iframe>
 	</div>
 	
 	<div>
-		 <iframe align="center" id="J_iframe" width="100%" height="1000" src="${app}/New/JiuDianGuanLi.html"  frameborder="no" border="0" marginwidth="0" marginheight="0" scrolling="no"  hidden="hide"></iframe>
+		<iframe align="center" id="J_iframe" width="100%" height="1000" src="${app}/New/JiuDianGuanLi.jsp"
+				frameborder="no" border="0" marginwidth="0" marginheight="0" scrolling="no" hidden="hide"></iframe>
 	</div>
+
 </nav>
 
 <div>
-	   <iframe align="center" id="GG" width="100%" height="500"  src="ZhanShi.html"  frameborder="no" border="0" marginwidth="0" marginheight="0" scrolling="no" ></iframe>
-	</div>
+	<iframe align="center" id="GG" width="100%" height="500" src="${app}/ZhanShi.jsp" frameborder="no " border="0"
+			marginwidth="0" marginheight="0" scrolling="no"></iframe>
+</div>
+<div id="testyasuo">
+
+</div>
 </body>
 <script>
 		function G1(){
 			$("#G").show();
 				$("#J_iframe").hide();
-				$("#GG").hide();
+			$("#J_iframe1").hide();
 				$("#G1").hide();
+			$("#GG").hide();
 		}
 		function G2(){
 			$("#J_iframe1").show();

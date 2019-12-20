@@ -1,4 +1,4 @@
-<%@ page language="java" import="java.util.*" pageEncoding="UTF-8" isELIgnored="false"%>
+<%@ page language="java" pageEncoding="UTF-8" isELIgnored="false" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <c:set var="app" value="${pageContext.request.contextPath}"></c:set>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
@@ -103,16 +103,19 @@
                 </li>
                 </ul>
                 </li>
-                <%--<li>--%>
-                    <%--<a href="#">--%>
-                        <%--<span class="nav-label cloudwarehouse">房态</span>--%>
-                    <%--</a>--%>
-                    <%--<ul class="nav nav-second-level">--%>
-                        <%--<li>--%>
-                            <%--<a class="J_menuItem" href="">房态管理</a>--%>
-                        <%--</li>--%>
-                    <%--</ul>--%>
-                <%--</li>--%>
+                <li>
+                    <a href="#">
+                        <span class="nav-label cloudwarehouse">房态</span>
+                    </a>
+                    <ul class="nav nav-second-level">
+                        <li>
+                            <a class="J_menuItem" href="${app}/liu.jsp">房态管理</a>
+                        </li>
+                        <li>
+                            <a class="J_menuItem" href="${app}/liu.jsp">价格管理</a>
+                        </li>
+                    </ul>
+                </li>
                 <li>
                     <a href="#">
                         <span class="nav-label order">服务订单管理</span>
@@ -158,7 +161,7 @@
                     </a>
                     <ul class="nav nav-second-level">
                         <li>
-                            <a class="J_menuItem" href="">发票</a>
+                            <a class="J_menuItem" href="${app}/ShangPinPrice.jsp">发票</a>
                         </li>
                         <li>
                             <a class="J_menuItem" href="${app}/LiushuiPrice.jsp">酒店流水</a>

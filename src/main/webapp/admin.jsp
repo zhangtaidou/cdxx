@@ -1,6 +1,5 @@
-<%@ page language="java" import="java.util.*" pageEncoding="UTF-8" isELIgnored="false"%>
+<%@ page language="java" pageEncoding="UTF-8" isELIgnored="false" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<c:set var="app" value="${pageContext.request.contextPath}"></c:set>
 <html>
 <head>
     <meta charset="utf-8">
@@ -34,7 +33,7 @@
                                     </span>
                                 </span>
                     </div>
-                    <div class="logo-element">hAdmin
+                    <div class="logo-element">
                     </div>
                 </li>
                 <li>
@@ -54,6 +53,26 @@
                     <ul class="nav nav-second-level">
                         <li>
                             <a class="J_menuItem" href="${app}/adminprice.jsp">管理员插入订单操作</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="nav-label financial">酒店管理</span>
+                    </a>
+                    <ul class="nav nav-second-level">
+                        <li>
+                            <a class="J_menuItem" href="${app}/New/JiuDianGuanLi.jsp">酒店操作</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="nav-label financial">商城管理</span>
+                    </a>
+                    <ul class="nav nav-second-level">
+                        <li>
+                            <a class="J_menuItem" href="${app}/adminprice.jsp">商城操作</a>
                         </li>
                     </ul>
                 </li>
@@ -80,6 +99,8 @@
 <script src="${app}/js/hAdmin.js?v=4.1.0"></script>
 <script type="text/javascript" src="${app}/js/index.js"></script>
 <!-- 第三方插件 -->
+
+
 <script src="${app}/js/plugins/pace/pace.min.js"></script>
 </body>
 </html>

@@ -1,4 +1,4 @@
-<%@ page language="java" import="java.util.*" pageEncoding="UTF-8" isELIgnored="false"%>
+<%@ page language="java" pageEncoding="UTF-8" isELIgnored="false" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <c:set var="app" value="${pageContext.request.contextPath}"></c:set>
 <html lang="en">
@@ -22,27 +22,10 @@
                 }
             })
         });
-
-
         function change(val)
         {
             var val1=$("#kind").find("option:selected").attr("name");
-            window.location.href="${app}/adminController/selectByPwd?account="+val1+"&password="+val;
-        }
-
-        function change1() {
-            $.ajax({
-                url:"${app}/adminController/selectByPwd",
-                datatype:"json",
-                type:"post",
-                data:{"account":"123456",
-                      "password":"111111"
-                },
-                error:function () {
-                    alert("GG");
-                }
-            });
-            location.hreF="${app}/Index.jsp";
+            window.location.href = "${app}/adminController/selectByPwd1?account=" + val1 + "&password=" + val;
         }
     </script>
 </head>
@@ -53,7 +36,7 @@
         <div class="jumbotron">
             <h1>客店桥齐均科技</h1>
         </div>
-        <select name="kind" id="kind" onchange="change(this.value)">
+        <select style="height: 50px;width: 100%" name="kind" id="kind" onchange="change(this.value)">
             <option value="">选择酒店</option>
         </select>
         <br><br>

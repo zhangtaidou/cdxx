@@ -1,7 +1,7 @@
 package com.yijiayifeng.controller;
 
-import com.yijiayifeng.entity.Admin;
-import com.yijiayifeng.service.AdminService;
+import com.yijiayifeng.entity.Admin_specialty;
+import com.yijiayifeng.service.Admin_specialtyService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -10,29 +10,22 @@ import javax.servlet.http.HttpSession;
 
 //管理员
 @Controller
-@RequestMapping("/adminController")
-public class AdminController {
+@RequestMapping("/admin_specialtyController")
+public class Admin_specialtyController {
 
     @Autowired
-    AdminService adminService;
+    Admin_specialtyService admin_specialtyService;
 
     //登录
     @RequestMapping("/selectByPwd")
-    public String selectByPwd(Admin admin, HttpSession session){
-        Admin admin1 = adminService.selectByPwd(admin);
+    public String selectByPwd(Admin_specialty admin, HttpSession session) {
+        Admin_specialty admin1 = admin_specialtyService.selectByPwdd(admin);
         if(admin1==null){
-            return "login";
+            return "login_TTC";
         }else {
             session.setAttribute("admin",admin1);
             return "Index";
         }
-    }
-
-    //修改订单结算状态
-    @RequestMapping("/updateByIdPrice_state")
-    public String updateByIdPrice_state(Admin admin) {
-        adminService.updateByIdPrice_state(admin);
-        return "";
     }
 }
 

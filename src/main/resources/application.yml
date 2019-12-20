@@ -19,9 +19,9 @@ spring:
     password: admin
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
-    url: jdbc:mysql://49.233.93.39:3306/admin
+    url: jdbc:mysql://49.233.93.39:3306/backstage
     username: root
-    password: root
+    password: taidou.0320
     driver-class-name: com.mysql.jdbc.Driver
   mvc:
     view:

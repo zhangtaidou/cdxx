@@ -1,4 +1,4 @@
-<%@ page language="java" import="java.util.*" pageEncoding="UTF-8" isELIgnored="false"%>
+<%@ page language="java" pageEncoding="UTF-8" isELIgnored="false" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <c:set var="app" value="${pageContext.request.contextPath}"></c:set>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
@@ -9,9 +9,9 @@
     <meta charset="utf-8">
 
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
-    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="${app}/css/bootstrap.min.css">
+    <script src="${app}/js/jquery.min.js"></script>
+    <script src="${app}/js/bootstrap.min.js"></script>
     <script src="${app}/js/jquery-1.8.3.min.js"></script>
     <style>
         h1{
@@ -38,7 +38,7 @@
     <br/>
     <br/>
     <br/>
-    <a href="${app}/ShopPingCenter.jsp"><h1><input type="button" value="商城管理员登录" class="btn btn-danger"></h1></a>
+        <a href="${app}/login_TTC.jsp"><h1><input type="button" value="商城管理员登录" class="btn btn-danger"></h1></a>
     <br/>
     <br/>
     <br/>

@@ -2,7 +2,6 @@ package com.yijiayifeng.service;
 
 import com.yijiayifeng.entity.Admin;
 import com.yijiayifeng.mapper.AdminMapper;
-import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
@@ -21,6 +20,7 @@ public class AdminServiceImpl  implements  AdminService{
     @Transactional(propagation = Propagation.SUPPORTS)
     public Admin selectByPwd(Admin admin) {
         Admin admin1 = adminMapper.selectByPwd(admin);
+        System.out.println(admin1);
         return admin1;
     }
 

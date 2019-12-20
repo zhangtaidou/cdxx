@@ -1,9 +1,11 @@
 package com.yijiayifeng.entity;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.experimental.Accessors;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import java.util.Date;
 @Data
@@ -11,9 +13,14 @@ import java.util.Date;
 @NoArgsConstructor
 @Accessors(chain = true)
 public class DateTime {
-    private int id;
-    private Date datetime;
-    private String room;
-    private String struts;
-    private Integer adminId;
+    private Integer id;
+    @JsonFormat(pattern = "yyyy/MM/dd", timezone = "GMT+8")
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
+    private Date date;
+    private String kind;
+    private String status;
+    private String room_name;
+    private Double price;
+    private Integer admin_id;
 }
+

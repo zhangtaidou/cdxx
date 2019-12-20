@@ -1,12 +1,10 @@
 package com.yijiayifeng.service;
 
-import com.yijiayifeng.entity.Admin;
+import com.yijiayifeng.entity.Admin_specialty;
 
 
 //管理员
-public interface AdminService {
+public interface Admin_specialtyService {
     //登录
-    public Admin selectByPwd(Admin admin);
-    //修改订单结算状态
-    public void updateByIdPrice_state(Admin admin);
+    public Admin_specialty selectByPwdd(Admin_specialty admin);
 }

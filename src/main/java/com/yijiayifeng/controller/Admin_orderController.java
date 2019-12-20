@@ -1,10 +1,11 @@
 package com.yijiayifeng.controller;
 
 
-import com.yijiayifeng.entity.*;
+import com.yijiayifeng.entity.Admin;
+import com.yijiayifeng.entity.Order_;
+import com.yijiayifeng.entity.Total;
 import com.yijiayifeng.service.Admin_orderService;
 import org.springframework.beans.factory.annotation.Autowired;
-
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -87,7 +88,6 @@ public class Admin_orderController {
         admin_orderService.updateByDateOrder(order_);
         return "Panduan";
     }
-
 
 
     //根据手机号或者姓名查询某用户订单

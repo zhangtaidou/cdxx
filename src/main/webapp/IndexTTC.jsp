@@ -1,4 +1,4 @@
-<%@ page language="java" import="java.util.*" pageEncoding="UTF-8" isELIgnored="false"%>
+<%@ page language="java" pageEncoding="UTF-8" isELIgnored="false" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <c:set var="app" value="${pageContext.request.contextPath}"></c:set>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
@@ -89,6 +89,24 @@
                     <ul class="nav nav-second-level">
                         <li>
                             <a class="J_menuItem" href="${app}/Speciality_order.jsp">所有订单</a>
+                        </li>
+                        <li>
+                            <a class="J_menuItem" href="${app}/New/Speciality_order0.jsp">确认订单</a>
+                        </li>
+                        <li>
+                            <a class="J_menuItem" href="${app}/New/Speciality_order1.jsp">已发货订单</a>
+                        </li>
+                        <li>
+                            <a class="J_menuItem" href="${app}/New/Speciality_order2.jsp">已取消订单</a>
+                        </li>
+                        <li>
+                            <a class="J_menuItem" href="${app}/New/Speciality_order3.jsp">申请退款订单</a>
+                        </li>
+                        <li>
+                            <a class="J_menuItem" href="${app}/New/Speciality_order4.jsp">确认收货订单</a>
+                        </li>
+                        <li>
+                            <a class="J_menuItem" href="${app}/New/Speciality_order8.jsp">已成功订单</a>
                         </li>
                         <li>
                             <a class="J_menuItem" href="${app}/HuoWu.jsp">货物管理</a>

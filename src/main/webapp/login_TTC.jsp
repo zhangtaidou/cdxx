@@ -1,10 +1,10 @@
-<%@ page language="java" import="java.util.*" pageEncoding="UTF-8" isELIgnored="false"%>
+<%@ page language="java" pageEncoding="UTF-8" isELIgnored="false" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <c:set var="app" value="${pageContext.request.contextPath}"></c:set>
 <html>
 	<head>
 		<meta charset="utf-8" />
-		<title>管理员登陆页面</title>
+        <title>商城管理员登陆页面</title>
 		<!-- Custom Theme files -->
 		<link href="${app}/css/styleone.css" rel="stylesheet" type="text/css" media="all"/>
 		<!-- Custom Theme files -->
@@ -20,18 +20,18 @@
 		<div class='login'>
 			<h2>Login</h2>
 			<div class="login-top">
-				<h1>管理员登陆</h1>
-				<form action="${app}/adminController/selectByPwd" method="post">
-					<input type="text" value="用户名" name="account" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'User Id';}"/>
+                <h1>商城管理员登陆</h1>
+                <form action="${app}/admin_specialtyController/selectByPwd" method="post">
+                    <input type="text" value="用户名" name="user_name" onfocus="this.value = '';"
+                           onblur="if (this.value == '') {this.value = 'User Id';}"/>
 					<input type="password" value="password" name="password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'password';}"/>
-
 				<div class='forgot'>
 					<input type="submit" value="登陆" />
 				</div>
 				</form>
 			</div>
 			<div class='login-bottom'>
-				<h3>管理员注册</h3>
+                <h3>商城管理员注册</h3>
 			</div>
 		</div>
 	</body>

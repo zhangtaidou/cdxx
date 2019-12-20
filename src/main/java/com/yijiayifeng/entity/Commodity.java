@@ -22,4 +22,6 @@ public class Commodity {
     @JsonFormat(pattern = "yyyy-MM-dd",timezone = "GMT+8")
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date date; //时间
+    private Integer admin_id;//酒店id
+    private String kind; //商品分类
 }

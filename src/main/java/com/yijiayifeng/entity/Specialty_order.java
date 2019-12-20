@@ -16,13 +16,14 @@ import java.util.Date;
 @Accessors(chain = true)
 public class Specialty_order {
     private Integer id;    //主键
-    private String name;   //商品名称
+    private Integer admin_specialty_id;   //特产的admin id
+    private Integer user_id;// 用户id
+    private String name;//名称
     private Double price;  //单价
-    private Integer sales; //销量
-    private Integer stock;   //库存
+    private Double count; //数量
+    private String state; //状态
     @JsonFormat(pattern = "yyyy-MM-dd",timezone = "GMT+8")
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date date; //时间
-    private Integer admin_id;//经销商id
     private String kind; //商品分类
 }

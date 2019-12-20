@@ -31,6 +31,6 @@ public class Order_ {
     private String  state; //入住状态是否入住
     private Date  datea;   //起始时间
     private Date  dateb;  //结束时间
-    private String  price_state; //订单结算状态
+    private String price_state; //订单结算状态
     private String nuber; //工号
 }
